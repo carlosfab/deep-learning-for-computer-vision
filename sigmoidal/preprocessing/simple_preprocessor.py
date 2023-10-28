@@ -33,4 +33,6 @@ class SimplePreprocessor:
         Returns:
             NumPy array: The resized image as a NumPy array.
         """
-        return cv2.resize(image, (self.width, self.height), interpolation=self.inter)
+        return cv2.resize(
+            image, (self.width, self.height), interpolation=self.inter
+        )

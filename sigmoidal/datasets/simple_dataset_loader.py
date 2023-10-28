@@ -1,9 +1,10 @@
 # import necessary libraries
-import numpy as np
-import cv2
-from typing import List, Optional, Tuple
-from pathlib import Path
 import os
+from pathlib import Path
+from typing import List, Optional, Tuple
+
+import cv2
+import numpy as np
 from tqdm import tqdm
 
 
@@ -39,10 +40,10 @@ class SimpleDatasetLoader:
         labels = []
 
         # Convert the generator to a list to get all image paths
-        paths = list(Path(dataset_path).glob("*/*"))
+        paths = list(Path(dataset_path).glob('*/*'))
 
         # Iterate over each image path and load the image and label
-        for img_path in tqdm(paths, total=len(paths), desc="Loading images"):
+        for img_path in tqdm(paths, total=len(paths), desc='Loading images'):
             # Read the image
             image = cv2.imread(str(img_path))
 

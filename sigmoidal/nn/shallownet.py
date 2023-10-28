@@ -1,13 +1,14 @@
-from tensorflow import keras
-from keras.models import Sequential
-from keras.layers import Dense, Conv2D, Activation, Flatten
 from keras import backend as K
+from keras.layers import Activation, Conv2D, Dense, Flatten
+from keras.models import Sequential
+from tensorflow import keras
 
 
 class ShallowNet:
     """
     ShallowNet is a class that builds a shallow neural network for image classification.
     """
+
     @staticmethod
     def build(width, height, depth, classes):
         """
@@ -32,11 +33,11 @@ class ShallowNet:
         model = Sequential()
         input_shape = (height, width, depth)
 
-        model.add(Conv2D(32, (3, 3), padding="same", input_shape=input_shape))
-        model.add(Activation("relu"))
+        model.add(Conv2D(32, (3, 3), padding='same', input_shape=input_shape))
+        model.add(Activation('relu'))
         model.add(Flatten())
         model.add(Dense(classes))
-        model.add(Activation("softmax"))
+        model.add(Activation('softmax'))
 
         # return the network
         return model
