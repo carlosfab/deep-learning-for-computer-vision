@@ -1,1 +1,20 @@
-site_name: My Docs
+site_name: Deep Learning for Computer Vision
+theme:
+  name: material # or other theme
+  palette:
+    primary: blue
+  language: en
+
+repo_name: "carlosfab/deep-learning-for-computer-vision"
+repo_url: "https://github.com/carlosfab/deep-learning-for-computer-vision"
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python

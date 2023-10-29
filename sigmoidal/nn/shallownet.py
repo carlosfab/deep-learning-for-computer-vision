@@ -5,9 +5,7 @@ from tensorflow import keras
 
 
 class ShallowNet:
-    """
-    ShallowNet is a class that builds a shallow neural network for image classification.
-    """
+    """ShallowNet is a class that builds a shallow neural network for image classification."""
 
     @staticmethod
     def build(width, height, depth, classes):

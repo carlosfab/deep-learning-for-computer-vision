@@ -1,6 +1,6 @@
 # import necessary libraries
-import tensorflow as tf
-from tf.keras.preprocessing.image import img_to_array
+from tensorflow import keras
+from keras.utils import img_to_array
 
 
 class ImageToArrayPreprocessor:
@@ -21,4 +21,4 @@ class ImageToArrayPreprocessor:
         self.data_format = data_format
 
     def preprocess(self, image):
-        return
+        return img_to_array(image, data_format=self.data_format)
